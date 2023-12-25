@@ -2,7 +2,6 @@ import /vendor/etc/init/hw/init.vendor.st21nfc.rc
 
 on fs
     insmod /vendor/lib/modules/goodix_fod_mmi.ko
-    insmod /vendor/lib/modules/con_dfpar.ko
     #zram wb
     mount_all /vendor/etc/fstab.qcom.zram --early
 
