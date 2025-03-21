@@ -8,9 +8,6 @@ on fs
 on post-fs && property:ro.boot.secure_hardware=0
         write /proc/con_dfpar/con_dfpar_enable 1
 
-on late-init
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/${ro.vendor.mot.gki.path} moto_mm moto_swap
-
 on early-boot
     # factory i2c
     chmod 0660 /dev/i2c-0
