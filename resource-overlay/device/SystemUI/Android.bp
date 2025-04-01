@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageSdkResAvatrn",
+    name: "SystemUIResDevice",
     vendor: true,
 }
