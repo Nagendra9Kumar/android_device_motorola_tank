@@ -433,3 +433,7 @@ vendor/firmware/focaltech-csot-ft3681-30-01-avatrn.bin
 vendor/firmware/goodix-boe-gt9916S-24010501-6597AA91-avatrn.bin
 vendor/firmware/goodix-tm-gt9916S-24031504-65F3E04F-avatrn.bin
 vendor/firmware/tm_goodix_cfg_group.bin
+
+# Touchscreen firmware (recovery)
+vendor/firmware/goodix-boe-gt9916S-24010501-6597AA91-avatrn.bin:recovery/root/vendor/firmware/goodix-boe-gt9916S-24010501-6597AA91-avatrn.bin
+vendor/firmware/goodix-tm-gt9916S-24031504-65F3E04F-avatrn.bin:recovery/root/vendor/firmware/goodix-tm-gt9916S-24031504-65F3E04F-avatrn.bin
