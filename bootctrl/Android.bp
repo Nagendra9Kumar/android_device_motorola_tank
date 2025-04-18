@@ -17,7 +17,7 @@
 cc_library {
     name: "bootctrl.moto_sm7450",
     defaults: ["bootctrl_hal_defaults"],
-    static_libs: ["libgptutils.moto_sm7550"],
+    static_libs: ["libgptutils.moto_sm7450"],
 }
 
 cc_library_shared {
