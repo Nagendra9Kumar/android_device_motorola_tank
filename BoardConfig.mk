@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/eqe
+DEVICE_PATH := device/motorola/tank
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -52,8 +52,8 @@ TARGET_SCREEN_HEIGHT := 2712
 TARGET_SCREEN_WIDTH := 1220
 
 # Init
-#TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_eqe
-#TARGET_RECOVERY_DEVICE_MODULES := libinit_eqe
+#TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_tank
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_tank
 
 # Kernel
 BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 nosoftlockup pstore.compress=none page_pinner=on printk.devkmsg=on mem.enable_mglru=1 bootconfig
@@ -88,9 +88,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Platform
-TARGET_BOARD_PLATFORM := crow
-TARGET_BOOTLOADER_BOARD_NAME := eqe
-QCOM_BOARD_PLATFORMS += crow
+TARGET_BOARD_PLATFORM := taro
+TARGET_BOOTLOADER_BOARD_NAME := tank
+QCOM_BOARD_PLATFORMS += taro
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
