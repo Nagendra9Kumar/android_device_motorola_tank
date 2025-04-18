@@ -1,27 +1,27 @@
 ![PBRP](https://pitchblackrecovery.com/wp-content/uploads/2020/06/New_Logo-7-e1594187397350.png "PBRP")
-Device configuration for Motorola Edge 50 Pro (eqe)
+Device configuration for Motorola Edge 50 (tank)
 =========================================
 # How to Compile PBRP
 https://pitchblackrecovery.com/docs/how-to-compile/
 
-The Motorola Edge 50 Pro (codenamed _"eqe"_) is a flagship smartphone from Motorola mobility announced in 2024.
+The Motorola Edge 50 (codenamed _"tank"_) is a midrange smartphone from Motorola mobility announced in 2024.
 
 ## Device specifications
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-SoC     | Qualcomm SM7550=AB Snapdragon 7 Gen 3 (4 nm)
+SoC     | Qualcomm SM7450=AB Snapdragon 7 Gen 1 AE (4 nm)
 CPU     | Octa-core (1x2.63 GHz Cortex-A715 & 4x2.4 GHz Cortex-A715 & 3x1.8 GHz Cortex-A510)
 GPU     | Adreno 720
 Memory  | 8/12 GB RAM (LPDDR4)
 Shipped Android Version | 14.0, Hello ui
 Storage | 256 GB (UFS 2.2)
-Battery | Non-removable Li-Po 4500 mAh (Global)
+Battery | Non-removable Li-Po 5000 mAh (Global)
 Display | 1220 x 2712 pixels, 6.7 inches (~446 ppi density)
 Camera  | 50MP (Main) + 13MP (Ultra-wide) + 10MP (Telephoto) + 50MP (Selfie)
 
 ## Device picture
-![Motorola Edge 50 Pro](https://motorolaroe.vtexassets.com/arquivos/ids/157631/2-motorola-edge-50-pro-PDP-ecomm-render-color2-15-f3l17kud.png?v=638488615773400000)
+![Motorola Edge 50](https://motorolaroe.vtexassets.com/arquivos/ids/157631/2-motorola-edge-50-pro-PDP-ecomm-render-color2-15-f3l17kud.png?v=638488615773400000)
 
 # Status
 Current state of features:
