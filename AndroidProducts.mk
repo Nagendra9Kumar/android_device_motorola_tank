@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_eqe.mk
+    $(LOCAL_DIR)/twrp_tank.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_eqe-user \
-    twrp_eqe-userdebug \
-    twrp_eqe-eng
+    twrp_tank-user \
+    twrp_tank-userdebug \
+    twrp_tank-eng
