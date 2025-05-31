@@ -79,5 +79,13 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
+# VINTF
+ODM_MANIFEST_SKUS += dn n
+ODM_MANIFEST_DN_FILES := \
+    $(LOCAL_PATH)/manifests/manifest_dn.xml
+ODM_MANIFEST_N_FILES := \
+    $(LOCAL_PATH)/manifests/manifest_n.xml \
+    device/motorola/sm7435-common/vintf/manifest_ss.xml
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/avatrn/avatrn-vendor.mk)
