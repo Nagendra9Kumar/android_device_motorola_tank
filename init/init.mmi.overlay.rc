@@ -188,9 +188,6 @@ on property:ro.bootmode=mot-factory
     chown vendor_tcmd system /sys/module/mmi_charger/parameters/factory_kill_disable
     chmod 0660 /sys/module/mmi_charger/parameters/factory_kill_disable
 
-on early-init
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -r -d /vendor/lib/modules/${ro.vendor.mot.gki.path} zram
-
 on init && property:ro.boot.cid=0x0000
     write /sys/module/sgm4154x_charger_lite/parameters/paired_vbat_panic_enabled 1
 
