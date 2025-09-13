@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += \
     FrameworksResDevice \
     LineageSdkResDevice \
     LineageSystemUIResDevice \
+    SettingsResDevice \
     SystemUIResDevice
 
 # Audio
