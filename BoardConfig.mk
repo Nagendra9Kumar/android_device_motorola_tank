@@ -14,13 +14,13 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/eqs
+DEVICE_PATH := device/motorola/avatrn
 
-# Inherit from motorola sm8475-common
-include device/motorola/sm8475-common/BoardConfigCommon.mk
+# Inherit from motorola sm7435-common
+include device/motorola/sm7435-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := eqs
+TARGET_BOOTLOADER_BOARD_NAME := avatrn
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifests/manifest_eqs.xml
@@ -33,7 +33,7 @@ ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/manifests/manifest_n.xml $(COMMON_PATH)/m
 
 # Kernel
 TARGET_KERNEL_CONFIG += \
-	vendor/ext_config/moto-waipio-eqs.config
+	vendor/ext_config/moto-parrot-avatrn.config
 
 # Partitions
 BOARD_MOT_DP_GROUP_SIZE := 11806965760 # ( BOARD_SUPER_PARTITION_SIZE - 4MB )
@@ -56,4 +56,4 @@ BOARD_AVB_ROLLBACK_INDEX := 26
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 26
 
 # inherit from the proprietary version
-include vendor/motorola/eqs/BoardConfigVendor.mk
+include vendor/motorola/avatrn/BoardConfigVendor.mk

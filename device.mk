@@ -29,14 +29,14 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 31
 
-# Inherit from motorola sm8475-common
-$(call inherit-product, device/motorola/sm8475-common/common.mk)
+# Inherit from motorola sm7435-common
+$(call inherit-product, device/motorola/sm7435-common/common.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
-    FrameworksResEqs \
-    LineageSystemUIEqs \
-    SystemUIResEqs
+    FrameworksResAvatrn \
+    LineageSystemUIAvatrn \
+    SystemUIResAvatrn
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -88,4 +88,4 @@ $(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.moto_sm8475
 $(call soong_config_set,qti_vibrator,use_effect_stream,true)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/eqs/eqs-vendor.mk)
+$(call inherit-product, vendor/motorola/avatrn/avatrn-vendor.mk)
