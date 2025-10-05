@@ -20,7 +20,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'vendor/motorola/sm8475-common',
+    'vendor/motorola/sm7435-common',
     'hardware/motorola',
     'hardware/qcom-caf/sm8450',
     'vendor/qcom/opensource/commonsys-intf/display',
@@ -49,5 +49,5 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == '__main__':
-    utils = ExtractUtils.device_with_common(module, 'sm8475-common', module.vendor)
+    utils = ExtractUtils.device_with_common(module, 'sm7435-common', module.vendor)
     utils.run()

@@ -1,5 +1,9 @@
+# e-SIM
+masterclear.allow_retain_esim_profiles_after_fdr=true
+ro.telephony.esim_slot_id=1
+
 # Moto
 ro.vendor.product.display=motorola edge 2024
 
 # Radio
-ro.vendor.radio.imei.sv=36
+ro.vendor.radio.imei.sv=13
