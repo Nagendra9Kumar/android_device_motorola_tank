@@ -4,7 +4,7 @@
 ---------------
 **Initialize local repo**
 ```
-mkdir twrp-12
+mkdir twrp-12 && cd twrp-12
 repo init -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
 ```
 **Sync up with this command:**
@@ -16,7 +16,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 ---------------
 **Clone this repo**
 ```bash
-git clone https://github.com/retardpro/android_device_motorola_tank -b android-12.1 device/motorola/tank
+git clone https://github.com/nagendra9kumar/android_device_motorola_tank device/motorola/tank
 ```
 
 3.Build
@@ -32,4 +32,4 @@ mka vendorbootimage
 ```
 
 * If also that is successful, congratulation!
-* Go to `out/target/product/tank/` and you will find your vendor_boot.img
+* Go to `out/target/product/tank/` and you will find your recovery.img
