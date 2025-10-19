@@ -145,9 +145,12 @@ TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_NTFS_3G := true
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TW_NO_SCREEN_BLANK := true
+
+# Screen Brightness
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
-TW_MAX_BRIGHTNESS := 2047
-TW_DEFAULT_BRIGHTNESS := 1024
+TW_MAX_BRIGHTNESS := 16128
+TW_DEFAULT_BRIGHTNESS := 10000 # Approximately 62% of max, adjust if needed
+
 TW_FRAMERATE := 60
 TW_HAS_EDL_MODE := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
