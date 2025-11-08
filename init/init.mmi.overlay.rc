@@ -208,10 +208,6 @@ on property:vendor.bluetooth.sar_state=connect
 on property:vendor.bluetooth.sar_state=disconnect
     write /data/vendor/radio/bluetooth_sar disconnect
 
-# Disable the host silent recovery
-on property:sys.boot_completed=1 && property:ro.build.type=userdebug
-    write /sys/class/remoteproc/remoteproc3/recovery disabled
-
 on property:sys.usb.accessory_current_limit=1
     write /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_pmic_icl 1000
 
