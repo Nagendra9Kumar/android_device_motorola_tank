@@ -197,11 +197,6 @@ on init && property:ro.boot.chg_panic_enabled=false
 on init && property:ro.boot.chg_panic_enabled=true
     write /sys/module/sgm4154x_charger_lite/parameters/paired_vbat_panic_enabled 1
 
-# Enable debugfs for userdebug build
-on early-init && property:ro.build.type=userdebug
-    mount debugfs debugfs /sys/kernel/debug
-    chmod 0755 /sys/kernel/debug
-
 on property:vendor.bluetooth.sar_state=connect
     write /data/vendor/radio/bluetooth_sar connect
 
