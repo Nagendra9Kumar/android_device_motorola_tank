@@ -35,7 +35,7 @@ $(call inherit-product, device/motorola/sm7435-common/common.mk)
 # Overlay
 PRODUCT_PACKAGES += \
     FrameworksResAvatrn \
-    LineageSystemUIAvatrn \
+    LineageSystemUIResAvatrn \
     SystemUIResAvatrn
 
 # Audio
