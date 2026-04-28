@@ -5,12 +5,12 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.6.3_0.0__3.0.0_0.0__eai_1.10_enpu1.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.7.20_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__4.7.0_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_1.43_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__4.8.1.11_0.0__3.0.0_0.0__3.1.2_0.0__3.2.0_0.1__eai_1.43_enpuv2.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__4.8.4_0.0__3.0.0_0.0__eai_1.43_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__4.8.13_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_1.43_enpu2.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__4.8.4_0.0__3.0.0_0.0__eai_1.43_enpu2.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/parrot_qrd/QRD_parrot_sku1_acdb_cal.acdb
 vendor/etc/acdbdata/parrot_qrd/QRD_parrot_sku1_workspaceFileXml.qwsp
@@ -26,6 +26,8 @@ vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
+vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/com.qti.chiusecaseselector.so
 vendor/lib64/com.qti.settings.clarence.so
 vendor/lib64/com.qti.settings.netrani.so
@@ -35,12 +37,6 @@ vendor/lib64/com.qualcomm.mcx.linearmapper.so
 vendor/lib64/com.qualcomm.mcx.policy.mfl.so
 vendor/lib64/com.qualcomm.mcx.policy.xr.so
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
-vendor/lib64/hw/camera.qcom.so
-vendor/lib64/hw/com.qti.chi.override.so
-vendor/lib64/libanc_hdr.so
-vendor/lib64/libanc_hdr_adapter_front_main.so
-vendor/lib64/libanc_hdr_adapter_rear_main.so
-vendor/lib64/libanc_hdr_adapter_rear_uw.so
 vendor/lib64/libBSTHDRDETECT.so
 vendor/lib64/libBSTMultiExpoGainHDR.so
 vendor/lib64/libBSTNodeUtils.so
@@ -52,12 +48,16 @@ vendor/lib64/libSnpeHtpV69Stub.so
 vendor/lib64/libSnpeHtpV73Stub.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
-vendor/lib64/libarcsoft_super_night_raw.so
-vendor/lib64/libarcsoft_stellartrack.so
-vendor/lib64/libarcsoft_qnnhtp.so
-vendor/lib64/libarcsoft_portrait_distortion_correction.so
-vendor/lib64/libarcsoft_distortion_correction.so
+vendor/lib64/libanc_hdr.so
+vendor/lib64/libanc_hdr_adapter_front_main.so
+vendor/lib64/libanc_hdr_adapter_rear_main.so
+vendor/lib64/libanc_hdr_adapter_rear_uw.so
 vendor/lib64/libarcsoft_chi_utils.so
+vendor/lib64/libarcsoft_distortion_correction.so
+vendor/lib64/libarcsoft_portrait_distortion_correction.so
+vendor/lib64/libarcsoft_qnnhtp.so
+vendor/lib64/libarcsoft_stellartrack.so
+vendor/lib64/libarcsoft_super_night_raw.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libc++_shared.so
@@ -68,8 +68,8 @@ vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamerapostproc.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
-vendor/lib64/libhdr_impl.so
 vendor/lib64/libhdr10plus.so
+vendor/lib64/libhdr_impl.so
 vendor/lib64/libhme.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
@@ -211,11 +211,11 @@ vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib64/camera/components/libdepthmapwrapper_secure.so
 
 # Camera - eeprom
+vendor/lib64/camera/com.mot.eeprom.mot_gt24p128f_imx896_eeprom.so
+vendor/lib64/camera/com.mot.eeprom.mot_gt24p128f_ov50a_eeprom.so
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p64e_gc13a2_eeprom.so
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p64e_hi1336_eeprom.so
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p64e_s5kjd1_eeprom.so
-vendor/lib64/camera/com.mot.eeprom.mot_gt24p128f_imx896_eeprom.so
-vendor/lib64/camera/com.mot.eeprom.mot_gt24p128f_ov50a_eeprom.so
 
 # Camera - etc
 vendor/etc/bstconfig/bstai_hdr
@@ -244,8 +244,8 @@ vendor/etc/jiigan/siq_ocl_cache_rear_uw
 vendor/etc/jiigan/superiq_model_front_main
 vendor/etc/jiigan/superiq_model_rear_main
 vendor/etc/jiigan/superiq_model_rear_uw
-vendor/etc/tetras/portrait_repair_composite.model
 vendor/etc/tetras/super_resolution/sr_models.bin
+vendor/etc/tetras/portrait_repair_composite.model
 
 # Camera - feature2
 vendor/lib64/com.qti.feature2.anchorsync.so
@@ -307,16 +307,16 @@ vendor/firmware/cps4038.bin
 # Display calibration data
 vendor/etc/display/FOSSConfig.xml
 vendor/etc/display/qdcm_calib_data_mipi_mot_vid_csot_655_1080p_dsc_144hz.json
-vendor/etc/display/qdcm_calib_data_mipi_mot_video_dummy_qhd.json
 vendor/etc/display/qdcm_calib_data_mipi_mot_vid_tm_655_1080p_dsc_144hz.json
+vendor/etc/display/qdcm_calib_data_mipi_mot_video_dummy_qhd.json
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-goodixservice
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-goodix.rc
 vendor/etc/vintf/manifest/vendor.goodix.hardware.biometrics.fingerprint@2.1-service.xml
+vendor/lib64/hw/fingerprint.goodix.default.so
 vendor/lib64/com.motorola.hardware.display.panel@1.0.so
 vendor/lib64/com.motorola.hardware.display.panel@1.1.so
-vendor/lib64/hw/fingerprint.goodix.default.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
 
@@ -349,10 +349,10 @@ system_ext/bin/motsettings
 system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk
 
 # Moto Permissions
-product/etc/permissions/com.motorola.camera3.xml:vendor/etc/permissions/com.motorola.camera3.xml
-product/etc/permissions/com.motorola.camera3.content.ai.xml:vendor/etc/permissions/com.motorola.camera3.content.ai.xml
 product/etc/permissions/com.motorola.camera3.avatrn.xml:vendor/etc/permissions/com.motorola.camera3.avatrn.xml
+product/etc/permissions/com.motorola.camera3.content.ai.xml:vendor/etc/permissions/com.motorola.camera3.content.ai.xml
 product/etc/permissions/com.motorola.camera3.lens.xml:vendor/etc/permissions/com.motorola.camera3.lens.xml
+product/etc/permissions/com.motorola.camera3.xml:vendor/etc/permissions/com.motorola.camera3.xml
 product/etc/permissions/com.motorola.moto-uirefresh.xml
 
 # NFC - configs
