@@ -19,21 +19,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from avatrn device
-$(call inherit-product, device/motorola/avatrn/device.mk)
+# Inherit from tank device
+$(call inherit-product, device/motorola/tank/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_avatrn
-PRODUCT_DEVICE := avatrn
+PRODUCT_NAME := lineage_tank
+PRODUCT_DEVICE := tank
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := motorola edge 2024
+PRODUCT_MODEL := motorola edge 50
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DeviceProduct="avatrn_g" \
-    BuildDesc="avatrn_g-user 16 W1UAN36H.29-25 a3ee7a-ab45e7 release-keys" \
-    BuildFingerprint="motorola/avatrn_g/avatrn:16/W1UAN36H.29-25/a3ee7a-ab45e7:user/release-keys"
+    DeviceProduct="tank_g" \
+    BuildDesc="tank_g-user 16 W1UWS36M-W1-ST18 2ac57 release-keys" \
+    BuildFingerprint="motorola/tank_g/msi:16/W1UWS36M-W1-ST18/2ac57:user/release-keys"

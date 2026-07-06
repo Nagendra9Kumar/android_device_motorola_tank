@@ -27,7 +27,7 @@
          -2 is invalid so setting will resort to int value specified above.
          Set this to 0.0 to allow screen to go to minimal brightness.
          The user is forbidden from setting the brightness below this level. -->
-    <item format="float" name="config_screenBrightnessSettingMinimumFloat" type="dimen">0.03418803</item>
+    <item format="float" name="config_screenBrightnessSettingMinimumFloat" type="dimen">0.026507</item>
 
     <!-- Maximum screen brightness allowed by the power manager.
          -2 is invalid so setting will resort to int value specified above.
@@ -51,7 +51,7 @@
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <item format="float" name="config_screenBrightnessDimFloat" type="dimen">0.03418803</item>
+    <item format="float" name="config_screenBrightnessDimFloat" type="dimen">0.026507</item>
 
     <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
@@ -85,8 +85,9 @@
         <item>3500</item>
         <item>5000</item>
         <item>10000</item>
-        <item>20000</item>
         <item>30000</item>
+        <item>100000</item>
+        <item>200000</item>
     </array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
@@ -114,8 +115,9 @@
         <item>412</item>
         <item>500</item>
         <item>700</item>
-        <item>1000</item>
+        <item>800</item>
         <item>1200</item>
+        <item>1350</item>
     </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
@@ -123,19 +125,20 @@
 
          This array should be equal in size to config_screenBrightnessBacklight. -->
     <array name="config_screenBrightnessBacklight">
-        <item>9</item>
-        <item>26</item>
+        <item>7</item>
+        <item>27</item>
         <item>34</item>
-        <item>52</item>
-        <item>85</item>
-        <item>95</item>
-        <item>100</item>
-        <item>107</item>
-        <item>141</item>
+        <item>53</item>
+        <item>86</item>
+        <item>96</item>
+        <item>101</item>
+        <item>108</item>
+        <item>143</item>
         <item>200</item>
-        <item>219</item>
-        <item>229</item>
-        <item>245</item>
+        <item>222</item>
+        <item>231</item>
+        <item>235</item>
+        <item>253</item>
         <item>255</item>
     </array>
 
@@ -159,15 +162,16 @@
         <item>412</item>
         <item>500</item>
         <item>700</item>
-        <item>1000</item>
+        <item>800</item>
         <item>1200</item>
+        <item>1350</item>
     </array>
 
     <!-- MMS user agent string, for example OemNameDeviceName
          If the string contains a '%s' format string then that substring will be replaced
          with the value of Build.MODEL , ie
          <string name="config_mms_user_agent">OemName%s</string> -->
-    <string name="config_mms_user_agent" translatable="false">motorolaedge2024</string>
+    <string name="config_mms_user_agent" translatable="false">motorolaedge50</string>
 
     <!-- MMS user agent prolfile url, for example https://uaprof.oem_name.com/DeviceName.xml
          if the string contains a '%s' format string then that substring will be replaced
@@ -259,7 +263,7 @@
 
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string name="config_mainBuiltInDisplayCutout" translatable="false">M -42,0 L 42,0 L 42,106 L -42,106 Z</string>
+    <string name="config_mainBuiltInDisplayCutout" translatable="false">M -56,0 L 56,0 L 56,118 L -56,118 Z</string>
 
     <!-- The default refresh rate for a given device. Change this value to set a higher default
          refresh rate. If the hardware composer on the device supports display modes with a higher
@@ -275,7 +279,7 @@
          the framework from using higher refresh rates, even if display modes with higher refresh
          rates are available from hardware composer. Only has an effect if the value is
          non-zero. -->
-    <integer name="config_defaultPeakRefreshRate">144</integer>
+    <integer name="config_defaultPeakRefreshRate">120</integer>
 
     <!-- The display uses different gamma curves for different refresh rates. It's hard for panel
          vendors to tune the curves to have exact same brightness for different refresh rate. So
@@ -291,11 +295,13 @@
          the brightness value is negative, only the lux threshold is applied. -->
     <!-- Low zone brightness thresholds in the range [0, 255] -->
     <array name="config_brightnessThresholdsOfPeakRefreshRate" translatable="false">
-        <item>50</item>
+        <item>77</item>
+        <item>62</item>
     </array>
 
     <!-- Low zone lux thresholds -->
     <array name="config_ambientThresholdsOfPeakRefreshRate" translatable="false">
+        <item>70</item>
         <item>-1</item>
     </array>
 
@@ -309,8 +315,8 @@
 
     <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
     <array name="config_udfps_sensor_props" translatable="false">
-        <item>540</item>
-        <item>2167</item>
-        <item>91</item>
+        <item>610</item>
+        <item>2440</item>
+        <item>102</item>
     </array>
 </resources>

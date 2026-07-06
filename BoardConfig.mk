@@ -14,17 +14,17 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/avatrn
+DEVICE_PATH := device/motorola/tank
 
-# Inherit from motorola sm7435-common
-include device/motorola/sm7435-common/BoardConfigCommon.mk
+# Inherit from motorola sm7450-common
+include device/motorola/sm7450-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := avatrn
+TARGET_BOOTLOADER_BOARD_NAME := tank
 
 # Kernel
 TARGET_KERNEL_CONFIG += \
-	vendor/ext_config/moto-parrot-avatrn.config
+	vendor/ext_config/moto-waipio-tank.config
 
 # Partitions
 BOARD_MOT_DP_GROUP_SIZE := 9038725120 # ( BOARD_SUPER_PARTITION_SIZE - 4MB )
@@ -48,4 +48,4 @@ BOARD_AVB_ROLLBACK_INDEX := 22
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 22
 
 # inherit from the proprietary version
-include vendor/motorola/avatrn/BoardConfigVendor.mk
+include vendor/motorola/tank/BoardConfigVendor.mk

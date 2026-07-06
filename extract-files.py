@@ -28,7 +28,7 @@ from extract_utils.utils import (
 )
 
 namespace_imports = [
-    'vendor/motorola/sm7435-common',
+    'vendor/motorola/sm7450-common',
     'hardware/motorola',
     'hardware/qcom-caf/sm8450',
     'vendor/qcom/opensource/commonsys-intf/display',
@@ -62,6 +62,10 @@ def blob_fixup_graphic_buffer_size(
 
 
 blob_fixups: blob_fixups_user_type = {
+    (
+        'vendor/lib/libmot_chi_desktop_helper.so',
+        'vendor/lib64/libmot_chi_desktop_helper.so',
+    ): blob_fixup().add_needed('libgui_shim_vendor.so'),
     'vendor/lib64/libcamximageformatutils.so': blob_fixup().replace_needed(
         'vendor.qti.hardware.display.config-V2-ndk_platform.so',
         'vendor.qti.hardware.display.config-V2-ndk.so',
@@ -93,7 +97,7 @@ extract_fns: extract_fns_user_type = {
 }
 
 module = ExtractUtilsModule(
-    'avatrn',
+    'tank',
     'motorola',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
@@ -104,5 +108,5 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == '__main__':
-    utils = ExtractUtils.device_with_common(module, 'sm7435-common', module.vendor)
+    utils = ExtractUtils.device_with_common(module, 'sm7450-common', module.vendor)
     utils.run()
