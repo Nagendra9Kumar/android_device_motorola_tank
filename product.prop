@@ -13,3 +13,6 @@ ro.vendor.radio.imei.sv=27
 
 # SKU specific properties
 import /product/etc/hardware.sku.${ro.boot.hardware.sku}.prop
+
+# SetupWizard
+ro.setupwizard.mode=DISABLED

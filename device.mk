@@ -94,5 +94,24 @@ ODM_MANIFEST_N_FILES := \
     $(LOCAL_PATH)/vintf/manifest_n.xml \
     device/motorola/sm7450-common/vintf/manifest_ss.xml
 
+# Package overrides
+PRODUCT_PACKAGES_REMOVE += \
+    Seedvault
+
+# ADB Authorization & Root Access
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0 \
+    persist.sys.usb.config=adb
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/adb_keys:$(TARGET_COPY_OUT_SYSTEM)/etc/security/adb_keys \
+    $(LOCAL_PATH)/configs/adb_keys:$(TARGET_COPY_OUT_VENDOR)/etc/security/adb_keys \
+    $(LOCAL_PATH)/configs/adb_keys:$(TARGET_COPY_OUT_RAMDISK)/adb_keys
+
+# SetupWizard properties
+PRODUCT_PRODUCT_PROPERTIES += \
+    setupwizard.feature.skip_sim_setup=true \
+    setupwizard.feature.show_sim_setup=false
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/tank/tank-vendor.mk)
